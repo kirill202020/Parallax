@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+}
+
+
+.parallax{
+    min-height: 100vh;
+}
+
+.parallax__body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.parallax__container{
+    z-index: 2;
+    position: relative;
+    text-transform: uppercase;
+}
+
+
+.parallax__label{
+    color: #fbd784;
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 9px;
+    margin: 30px 0;
+    align-items: center;
+}
+
+
+.parallax__label::before{
+    flex: 0 0 70px;
+    content: '';
+    margin: 0 30px 0 0;
+    background: #fbd784;
+    height: 1px;
+}
+
+
+.parallax__title{
+    font-size: 88px;
+    color: #fff;
+}
+
+
+.parallax__images{
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    top: -10%;
+    left: -10%;
+    z-index: 1;
+}
+
+
+.parallax__item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+
+.parallax__image__clouds, .parallax__image__mountains, .parallax__image__human{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+
+
+.parallax__image__clouds{
+    background: url('./img/clouds.jpg') top / cover no-repeat;
+    top: 0;
+}
+
+.parallax__image__mountains{
+    background: url('./img/mountains.png') top / cover no-repeat;
+    top: 15%;
+    z-index: 2;
+}   
+
+
+.parallax__image__human{
+    background: url('./img/human.png') top / cover no-repeat;
+    top: 45%;
+    z-index: 3;
+}
+
+
+@media (max-aspect-ratio: 3/2) {
+    .parallax__image__human{
+        background-position: 20% top;
+    }
+}
+
+
+
+.content{
+    background: #0b1d26;
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+    color: #fff;
+}
+
+
+.content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    transform: translate(0px, -100%);
+    background: rgb(11,29,38);
+    background: linear-gradient(180deg, rgba(11,29,38,0) 0%, rgba(11,29,38,1) 100%);
+}
+
+
+
+.content__title{
+    font-size: 35px;
+    margin: 30px 0;
+}
+
+
+.content p{
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 30px;
+}
